@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: CI Pipeline
 
 on: 
@@ -20,3 +21,27 @@ jobs:
 
       - name: Run Tests
         run: npm test
+=======
+name: CI Pipeline
+
+on: 
+  push:
+    branches:
+      - main
+
+ jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setupnode@v3
+
+      - name: Install dependencies
+        run: npm install 
+
+      - name: Run Tests
+        run: npm test  
+>>>>>>> cf47345c13ebd2897563eab9203facfe93c549ef
