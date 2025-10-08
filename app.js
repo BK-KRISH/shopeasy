@@ -7,6 +7,8 @@ app.get("/", (req, res) => {
   res.send("Welcome to ShopEasy ! From App.js");
 });
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = {app,server }
